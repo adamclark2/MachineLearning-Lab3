@@ -47,6 +47,10 @@ grad = zeros(size(theta));
 
 % =============================================================
 
+xTheta = X*theta
+
+J = (1/m) * sum(  -y .* log(sigmoid(xTheta)) - (1-y).*log(1-sigmoid(xTheta))  )
+
 grad = grad(:);
 
 end
